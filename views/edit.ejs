@@ -1,0 +1,46 @@
+<%- include ('./partials/constant/head.ejs') %>
+
+    <!--  =============== HEADER ==============   -->
+    <h1>
+        Edit <%=pokemon.name%>
+    </h1>
+    <!--  =============== HEADER ==============   -->
+    <!--  ================ FORM ===============   -->
+    <form action="/pokemon/<%=id%>/?_method=PUT" method="post">
+        <!-- ---------- -->
+        <!-- name form -->
+        <div class="name-form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="<%=pokemon.name%> ">
+        </div>
+        <!-- ---------- -->
+        <!-- image display -->
+        <div class="image-form">
+            <img src="<%=pokemon.img%>" alt="Picture of pokemon">
+            <input type="text" name="img" id="img" value="<%=pokemon.img%>">
+        </div>
+        <!-- ---------- -->
+        <!-- edit types -->
+        <div class="pokemon-type-change">
+            <%- include ('./partials/type/edit-type.ejs') %>
+        </div>
+        <!-- ---------- -->
+        <!-- edit stats -->
+        <div class="pokemon-stats-change">
+            <%- include ('./partials/stats/edit-stats.ejs') %>
+        </div>
+        <div class="buttons">
+            <input class="update" type="submit" value="UPDATE">
+            <!---- cancel button ---->
+            <a href="/pokemon">
+                <input class='cancel' type="submit" value="CANCEL">
+            </a>
+        </div>
+        <!-- ----------------- -->
+    </form>
+    <!--  ================ FORM ===============   -->
+
+    <!-- ----------------- -->
+
+
+    <%- include ('./partials/constant/footer.ejs') %>

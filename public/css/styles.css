@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #FF8C94;
+    color: #F5F5F5;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Roboto',
+    sans-serif;
+    font-weight: 500;
+    }
+    
+    .container {
+        height: 100%;
+    }
+    img {
+        object-fit: fit;
+        height: 90px;
+        width: 90px;
+        border-radius: 20px;
+        border: 2px solid black;
+        transition: 350ms;
+    }
+    img:hover{
+        transform: scaleX(1.025) scaleY(1.025);
+    }
+    
+    h1 {
+        background: #DCEDC2;
+        border-radius: 15px;
+        margin: 0;
+        margin-bottom: 0.5em;
+        padding: 1em;
+        text-align: center;
+        color: #F5F5F5;
+        border: 1px solid black;
+    }
+    
+    .delete,
+    .edit,
+    .create,
+    .update,
+    .cancel,
+    .home {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 5px;
+    
+        font-size: 1em;
+        text-shadow: 1px 1px 1px black;
+        width: 90px;
+        border-radius: 10px;
+        padding: 7.5px;
+        border: 1px solid black;
+        background: #DCEDC2;
+        color: #F5F5F5;
+        transition: 250ms;
+    }
+    
+    .create,
+    .home {
+        width: 300px;
+        margin: auto;
+    }
+    a {
+        color: #F5F5F5;
+        text-decoration: none;
+        }
+
+        .delete:hover,
+        .edit:hover,
+        .create:hover,
+        .update:hover,
+        .cancel:hover,
+        .home:hover,
+        a:hover,
+        input:hover[type="submit"] {
+            color: #E8175D;
+        }
+        
+        .delete:hover {
+            color: #E8175D;
+        }
+        
+        .all-stats{
+            border: 1px solid black;
+        }
+        .change-type {
+            border: none;
+            font-size: 1em;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(3, 1fr);
+        
+        }
+        
+        .change-stats {
+            border: none;
+            display: grid;
+            grid-template-rows: 4;
+            justify-content: center;
+            font-size: 1em;
+            text-align: center;
+        }
+        
+        .change-stats input {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        
+        input[type="text"] {
+            border-radius: 10px;
+            display: flex;
+            margin: 0.4em 0.4em 0.8em 0.4em;
+            padding: 0.5em;
+            background: #A8E6CE;
+        }
+        label {
+            font-weight: 700;
+        }

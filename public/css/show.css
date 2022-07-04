@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-img {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.all-stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    display: flex;
+    margin-top: 15px;
+    background: rgba(193, 235, 187, 0.9);
+    border-radius: 15px;
+    width:300px;
+    height: 300px;
+    
+}
+.stats {
+margin: 0 auto;
+text-align: center;
+}
+.type {
+ margin: 0 auto;
+ text-align: center;
+}
+.stats h2 {
+display: flex;
+justify-content: center;
+}
+
+.type li, .stats li {
+padding: 2px;
+}
+
+
+
+

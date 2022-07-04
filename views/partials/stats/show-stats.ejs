@@ -1,0 +1,28 @@
+<h2>Stats</h2>
+<% if (pokemon.stats.hp) { %>
+    <ul>
+        <li>
+            Hitpoints: <%=pokemon.stats.hp%>
+        </li>
+        <li>
+            Attack: <%=pokemon.stats.attack%>
+        </li>
+        <li>
+            Defense: <%=pokemon.stats.defense%>
+        </li>
+        <li>
+            Speed: <%=pokemon.stats.speed%>
+        </li>
+    </ul>
+    <% } else if (pokemon.stats[0]) {%>
+        Hitpoints: <%=pokemon.stats[0]%>
+            </li>
+            <li>
+                Attack: <%=pokemon.stats[1]%>
+            </li>
+            <li>
+                Defense: <%=pokemon.stats[2]%>
+            </li>
+            <li>
+                Speed: <%=pokemon.stats[3]%>
+                    <% } %>

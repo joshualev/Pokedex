@@ -1,0 +1,34 @@
+.index-main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px;
+    grid-gap: 5px;
+}
+img {
+
+    display: flex;
+}
+.select-this-pokemon {
+    text-align: center;
+}
+h3 {
+    display: flex;
+}
+
+
+@media(min-width: 700px){
+    .index-main-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+    }
+}
+
+@media(min-width: 900px){
+    .index-main-content {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding: 50px;
+        grid-gap: 5px;
+    }
+}

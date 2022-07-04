@@ -1,0 +1,51 @@
+<%- include ('./partials/constant/head.ejs') %>
+
+<!--  =============== HEADER ==============   -->
+<div class="header index-header">
+    <!-- heading -->
+    <h1>Pokedex</h1>
+<!-- add new pokemon button -->
+<a href="/pokemon/new">
+    <input class='create' type="submit" value="Create a Pokemon">
+</a>
+</div>
+<!--  =============== HEADER ==============   -->
+
+<!--  ================ MAIN ===============   -->
+<!-- ------------------- -->
+<!-- display all pokemon -->
+<div class="index-main-content">
+    <!-- ------------------------ -->
+    <!-- loop through all pokemon -->
+    <% for (let i=0; i < pokemon.length; i++) { %>
+        <!-- --------------- -->
+        <!-- list item start -->
+        <div class="select-this-pokemon">
+        <!-- ------------ -->
+        <!-- pokemon name -->
+        <h3>
+            <%=pokemon[i].name%>
+        </h3>
+        <!-- ------------- -->
+        <!-- pokemon image -->
+        <a href="/pokemon/<%=i%>">
+            <img src="<%=pokemon[i].img%> " alt="Picture of <%=pokemon[i].name%>">
+        </a>
+        <!-- ----------- -->
+        <!-- edit button -->
+        <a href="/pokemon/<%=i%>/edit"><input class='edit' type="submit" value="Edit"></a>
+        <!-- ------------- -->
+        <!-- delete button -->
+        <form action="/pokemon/<%=i%>?_method=DELETE" method="POST"><input class='delete' type="submit" value="Delete">
+        </form>
+            <!-- end list item -->
+            <!-- ------------- -->
+            </div>
+            <% } %>
+        <!-- for loop end -->
+        <!-- ------------- -->
+        </div>
+        <!--  ================ MAIN ===============   -->
+
+
+<%- include ('./partials/constant/footer.ejs') %>

@@ -1,0 +1,36 @@
+<%- include ('./partials/constant/head.ejs') %>
+<div class="show-container">
+<!--  =============== HEADER ==============   -->
+        <div class="header">
+            <h1>
+                <%=pokemon.name%>
+            </h1>
+            <a class="home" href="/pokemon">Return to Pokedex</a>
+        </div>
+<!--  =============== HEADER ==============   -->
+
+<!--  ============= MAIN ================   -->
+<div class="main-content show-main-content">
+    <!-- ----- -->
+    <!-- image -->
+    <div class="pokemon-img">
+        <img src="<%=pokemon.img%>">
+        <a href="/pokemon/<%=id%>/edit"><input class='edit' type="submit" value="Edit"></a>
+    </div>
+    <!-- ----- -->
+    <!-- type  -->
+    <div class="all-stats">
+        <div class="type">
+    <%- include ('./partials/type/show-type.ejs') %>
+        </div>
+        <!-- ----- -->
+        <!--stats  -->
+        <div class="stats">
+        <%- include ('./partials/stats/show-stats.ejs') %>
+            </div>
+        </div>
+            <!-- ----- -->
+</div>
+<!--  ============= MAIN ================   -->
+</div>
+<%- include ('./partials/constant/footer.ejs') %>

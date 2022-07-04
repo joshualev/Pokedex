@@ -1,0 +1,17 @@
+<% if (pokemon.stats.hp) { %>
+    <fieldset class="change-stats">
+        <legend>Change stats</legend>
+        <label>Hitpoints:</label><input type="integer" name="stats" value="<%=pokemon.stats.hp%>">
+        <label>Attack:</label><input type="integer" name="stats" value="<%=pokemon.stats.attack%>">
+        <label>Defense:</label><input type="integer" name="stats" value="<%=pokemon.stats.defense%>">
+        <label>Speed:</label><input type="integer" name="stats" value="<%=pokemon.stats.speed%>">
+    </fieldset>
+    <% } else if (pokemon.stats[0]) {%>
+        <fieldset class="change-stats">
+            <legend>Change stats</legend>
+            <label>Hitpoints:</label><input type="integer" name="stats" value="<%=pokemon.stats[0]%>">
+            <label>Attack:</label><input type="integer" name="stats" value="<%=pokemon.stats[1]%>">
+            <label>Defense:</label><input type="integer" name="stats" value="<%=pokemon.stats[2]%>">
+            <label>Speed:</label><input type="integer" name="stats" value="<%=pokemon.stats[3]%>">
+        </fieldset>
+        <% } %>
